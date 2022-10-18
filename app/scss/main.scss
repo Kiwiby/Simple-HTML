@@ -1,3 +1,73 @@
+@import "vars";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+
+html,
 body {
-    background: blue;
+    height: 100%;
+}
+
+body {
+    font-family: $primaryFont;
+    font-size: 16px;
+}
+
+.container {
+    margin: 19px 240px;
+}
+
+#header .inner_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        display: block;
+        width: 48px;
+        height: 48px;
+
+        .img {
+            width: 100%;
+        }
+    }
+
+    .right_side_header {
+        display: flex;
+        align-items: center;
+
+        .nav_menu {
+            list-style-type: none;
+
+            li {
+                display: inline-block;
+                margin-right: 40px;
+            }
+
+            a {
+                text-decoration: none;
+                font-size: 20px;
+                font-weight: 500px;
+                color: #000000;
+                transition: linear .3s;
+
+                &:hover {
+                    color: $primaryColor;
+                }
+            }
+        }
+
+        .btn_simple {
+            text-decoration: none;
+            font-size: 16px;
+            padding: 12px 24px;
+            color: $primaryColor;
+            border: 1px solid $primaryColor;
+            border-radius: 23px;
+        }
+    }
 }
