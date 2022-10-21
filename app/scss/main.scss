@@ -41,6 +41,7 @@ body {
         color: #fff;
         border: 1px solid $primaryColor;
         border-radius: 23px;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
         transition: all 0.3s ease;
 
         &:hover {
@@ -56,11 +57,13 @@ body {
         color: $primaryColor;
         border: 1px solid #fff;
         border-radius: 23px;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
         transition: all 0.3s ease;
 
         &:hover {
             background-color: $primaryColor;
             color: #fff;
+            border: 1px solid $primaryColor;
         }
     }
 }
@@ -97,6 +100,7 @@ body {
 
         .nav_menu {
             list-style-type: none;
+            position: relative;
 
             li {
                 display: inline-block;
@@ -113,11 +117,32 @@ body {
                         color: $primaryColor;
                     }
                 }
+
+                .drop_down {
+                    margin-left: 8px;
+                }
             }
 
+            .sub_menu {
+                position: absolute;
+                width: 95px;
+                padding: 5px auto;
+                z-index: 10;
+                display: none;
+
+                li {
+                    margin-top: 10px;
+
+                    a {
+                        font-size: 17px;
+                    }
+                }
+
+            }
         }
     }
 }
+
 
 #hero .row {
     margin: 131px 240px 0 240px;
@@ -157,16 +182,151 @@ body {
         margin: 24px auto;
         color: #000000;
         font-size: 48px;
-        font-weight: 600;
+        font-weight: 700;
+        line-height: 58px;
     }
 
     .descr {
         margin-bottom: 50px;
         font-size: 18px;
+        line-height: 24px;
+        opacity: 0.5;
     }
 
     .img_hero {
         width: 472px;
         height: auto;
+    }
+}
+
+#content_top .inner_content_top {
+    margin: 112px 237px 120px 240px;
+    display: float;
+    align-items: center;
+    justify-content: center;
+
+    .notif {
+        margin: auto;
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        width: 120px;
+        padding: 8px 16px;
+        color: $primaryColor;
+        border: solid #F7F1FF;
+        border-radius: 20px;
+        background: #F7F1FF;
+        img {
+            width: 25.78px;
+            height: 17.18px;
+        }
+        p {
+            margin-left: 12px;
+            text-align: center;
+        }
+    }
+
+    .inline_descr {
+        margin: auto;
+        margin-bottom: 24px;
+        width: 672px;
+
+        h1 {
+            color: $secondaryColor;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 40px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .descr {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: #8989A2;
+        }
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .col_4 {
+            margin-right: 16px;
+            img {
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 16px;
+            }
+            h1 {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+                text-align: center;
+                color: $secondaryColor;
+                margin-bottom: 16px;
+            }
+
+            .descr {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                text-align: center;
+                color: #8989A2;
+            }
+        }
+    }
+}
+
+#content_middle .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 120px 241px 120px 224px;
+    .circle {
+        width: 412.5px;
+        height: 435.5px;
+        margin-right: 88px;
+    }
+    .col_6 {
+        width: 474px;
+        .notif {
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            width: 175px;
+            padding: 8px 16px;
+            color: $primaryColor;
+            border: solid #F7F1FF;
+            border-radius: 20px;
+            background: #F7F1FF;
+            img {
+                width: 25.78px;
+                height: 17.18px;
+            }
+            p {
+                margin-left: 14px;
+                text-align: center;
+            }
+        }
+        h1 {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 40px;
+            color: $secondaryColor;
+            text-align: start;
+            margin-bottom: 24px;
+        }
+        .descr {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #8989A2;
+            text-align: start;
+    
+        }
     }
 }
